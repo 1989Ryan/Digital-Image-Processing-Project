@@ -71,8 +71,10 @@ class basic_cv_tool:
         return img
     
     def image_rotation(self, img, rotation_theta):
+        theta=rotation_theta*np.pi/180
         rotate_matrix=np.array([
-            [np.cos(rotation_theta),-np.sin(rotation_theta),0],
-            [np.sin(rotation_theta),np.cos(rotation_theta),0]
+            [np.cos(theta),-np.sin(theta),np.sin(theta)*img.shape[0]],
+            [np.sin(theta),np.cos(theta),0]
             ],dtype=np.float32)
-        img = cv2.warpAffine(img,rotate_matrix)
+        img = cv2.warpAffine(img,rotate_matrix, (int(img.shape[0]*(np.cos(theta)+np.sin(theta))),int(img.shape[1]*(np.cos(theta)+np.sin(theta)))))
+        return img

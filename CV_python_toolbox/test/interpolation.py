@@ -14,6 +14,6 @@ image_2_name = '../../homework1/lena.bmp'
 
 tool = basic_cv_tool(image_2_name)
 img = tool.ImageRead(image_2_name)
-new_img = tool.image_bicubic_interpolation(img,(2048,2048))
-new_img = Image.fromarray(new_img)
-new_img.show()
+new_img1 = tool.image_bicubic_interpolation(img,(2048,2048))
+new_img2 = tool.image_bilinear_interpolation(img,(2048,2048))
+new_img3 = tool.image_Nearest_neighbor_interpolation(img,(2048,2048))
