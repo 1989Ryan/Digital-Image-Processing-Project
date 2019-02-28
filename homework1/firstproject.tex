@@ -281,6 +281,12 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 
 \subsection{$lena$图像的均值方差}
 
+图像的均值方差计算很容易，通过numpy的矩阵运算方法，可以得到$lena.bmp$和$elain.bmp$的图像的均值和方差。
+
+\begin{table}[h!]
+
+\end{table}
+
 \subsection{$lena$图像的插值}
 
 \subsubsection{最邻近插值}
@@ -293,9 +299,95 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 
 \subsubsection{水平shear}
 
+\begin{figure}[h!]
+	\centering
+	\subfigure[最邻近插值后的图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{lenashearnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值后的图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{lenashearlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值后的图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{lenashearcubic.png}}
+	\caption{lena图像水平偏移变换并插值的结果} 
+	\label{shear_result1} %%label for entire figure
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[最邻近插值后的图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{elainshearnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值后的图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{elainshearlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值后的图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{elainshearcubic.png}}
+	\caption{elain图像水平偏移变换并插值的结果} 
+	\label{shear_result2} %%label for entire figure
+\end{figure}
+
 \subsubsection{旋转}
 
+\begin{figure}[h!]
+	\centering
+	\subfigure[最邻近插值后的图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{lenarotationnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值后的图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{lenarotationlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值后的图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{lenarotationcubic.png}}
+	\caption{lena图像旋转30°变换并插值的结果} 
+	\label{shear_result1} %%label for entire figure
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[最邻近插值后的图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{elainrotationnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值后的图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{elainrotationlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值后的图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{elainrotationcubic.png}}
+	\caption{elain图像旋转30°变换并插值的结果} 
+	\label{shear_result2} %%label for entire figure
+\end{figure}
+
+
 \subsubsection{插值}
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[8bit图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{lena.png}}
+	\hspace{0.1in} \subfigure[7bit图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{7bitlena.png}}
+	\hspace{0.1in} \subfigure[6bit图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{6bitlena.png}}
+	\newline \subfigure[4bit图像]{
+		\label{4bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{4bitlena.png}}
+	\hspace{0.1in} \subfigure[3bit图像]{
+		\label{3bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{3bitlena.png}}
+	\hspace{0.1in} \subfigure[2bit图像]{
+		\label{2bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{2bitlena.png}}
+	\caption{图像灰度递减结果} 
+	\label{interpolation_result} %%label for entire figure
+\end{figure}
+
 
 \newpage
 \begin{thebibliography}{}

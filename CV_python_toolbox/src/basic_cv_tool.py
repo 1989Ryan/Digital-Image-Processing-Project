@@ -51,11 +51,11 @@ class basic_cv_tool:
         return var
 
     def image_Nearest_neighbor_interpolation(self, img, Zoom_index):
-        img = cv2.resize(img, Zoom_index, interpollation = cv2.INTER_NEAREST)
+        img = cv2.resize(img, Zoom_index, interpolation = cv2.INTER_NEAREST)
         return img
     
     def image_bilinear_interpolation(self, img, Zoom_index):
-        img = cv2.resize(img, Zoom_index, interpollation = cv2.INTER_LINEAR)
+        img = cv2.resize(img, Zoom_index, interpolation = cv2.INTER_LINEAR)
         return img
     
     def image_bicubic_interpolation(self, img, Zoom_index):
