@@ -2,6 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 import base64
 import struct
+import numpy as np
 
 from PIL import Image
 
@@ -41,28 +42,11 @@ class basic_cv_tool:
         return img
 
     def image_average(self, img):
-        mean = 0
-        shape = img.shape
-        width = shape[0]
-        height = shape[1]
-        for i in range(width):
-            for j in range(height):
-                for k in range(3):
-                    mean = mean + img[i,j,k]
-        mean = mean/(width * height * 3)
+        mean = np.mean(img)
         return mean
     
     def image_variance(self, img):
-        mean = self.image_average(img)
-        var = 0
-        shape = img.shape
-        width = shape[0]
-        height = shape[1]
-        for i in range(width):
-            for j in range(height):
-                for k in range(3):
-                    var = var + (img[i,j,k] - mean)**2
-        var = var/(width * height * 3)
+        var = np.var(img)
         return var
 
     def image_Nearest_neighbor_interpolation(self, ImageName, Zoom_index):

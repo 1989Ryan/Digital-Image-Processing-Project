@@ -14,6 +14,6 @@ image_2_name = '../../homework1/lena.bmp'
 
 tool = basic_cv_tool(image_2_name)
 img = tool.ImageRead(image_2_name)
-new_img = tool.greyscale_reduce(img,2)
+new_img = tool.greyscale_reduce(img,128)
 new_img = Image.fromarray(new_img)
 new_img.show()
