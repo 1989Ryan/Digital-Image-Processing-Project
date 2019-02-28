@@ -221,11 +221,42 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 
 \section{bmp图像处理}
 
-本节将阐述对我对图像$lena.bmp$和$elain.bmp$进行相应的处理的过程和算法。
+本节将阐述对我对图像$lena.bmp$和$elain.bmp$进行相应的处理的过程和算法。这里为了未来的作业的处理方便，我创建了一个用来处理数字图像的工具包$``CV python toolbox''$，这里包含了所有作业中布置的任务，包括了图像的读取，图像信息的分析，以及
+其他各种计算。同时也调用了部分opencv的库，本着学习和实践的目的，工具包中的核心算法和处理过程均为自行实现。这里采用了Python作为主体语言，主要是考虑到为了方便未来可能会采用深度学习的相关工具包。
 
 \subsection{$lena$图像的灰度递减}
 
-首先我将对$lena.bmp$图像进行灰度递减的操作。
+首先我将对$lena.bmp$图像进行灰度递减的操作。这里将$lena.bmp$的灰度值的bit位进行逐级递减的操作，从8位逐级降到１位，经过灰度降级操作，灰度的层级丰富程度也由256种降到了2种。我们的处理结果可以如下图\ref{greyscale_reduce_result}所示。
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[8bit图像]{
+		\label{8bitlena} %%first figure label
+		\includegraphics[width = 0.2\textwidth]{lena.bmp}}
+	\hspace{0.1in} \subfigure[7bit图像]{
+		\label{7bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{7bitlena.bmp}}
+	\hspace{0.1in} \subfigure[6bit图像]{
+		\label{6bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{6bitlena.bmp}}
+	\hspace{0.1in} \subfigure[5bit图像]{
+		\label{5bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{5bitlena.bmp}}
+	\newline \subfigure[4bit图像]{
+		\label{4bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{4bitlena.bmp}}
+	\hspace{0.1in} \subfigure[3bit图像]{
+		\label{3bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{3bitlena.bmp}}
+	\hspace{0.1in} \subfigure[2bit图像]{
+		\label{2bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{2bitlena.bmp}}
+	\hspace{0.1in} \subfigure[1bit图像]{
+		\label{1bitlena} %%second figure label
+		\includegraphics[width = 0.2\textwidth]{1bitlena.bmp}}	
+	\caption{图像灰度递减结果} 
+	\label{greyscale_reduce_result} %%label for entire figure
+\end{figure}
 
 \subsection{$lena$图像的均值方差}
 
