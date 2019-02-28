@@ -1,0 +1,8 @@
+*.*
+!*.md
+!*.py
+!.gitignore
+!*.jpeg
+!*.png
+!*.bmp
+!*.tex
