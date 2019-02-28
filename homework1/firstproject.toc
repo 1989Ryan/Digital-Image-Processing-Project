@@ -1,0 +1,20 @@
+\contentsline {paragraph}{\fontsize {12.1pt}{\baselineskip }\selectfont 关键词：}{1}
+\contentsline {section}{\numberline {1}项目任务}{3}
+\contentsline {section}{\numberline {2}BMP图像简介}{3}
+\contentsline {subsection}{\numberline {2.1}存储算法}{4}
+\contentsline {subsection}{\numberline {2.2}文件格式}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}像素数组}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}压缩}{6}
+\contentsline {subsubsection}{\numberline {2.2.3}像素存储}{6}
+\contentsline {subsection}{\numberline {2.3}bmp图像举例}{7}
+\contentsline {section}{\numberline {3}bmp图像处理}{8}
+\contentsline {subsection}{\numberline {3.1}$lena$图像的灰度递减}{8}
+\contentsline {subsection}{\numberline {3.2}$lena$图像的均值方差}{9}
+\contentsline {subsection}{\numberline {3.3}$lena$图像的插值}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}最邻近插值}{9}
+\contentsline {subsubsection}{\numberline {3.3.2}双线性插值}{9}
+\contentsline {subsubsection}{\numberline {3.3.3}双三次插值}{9}
+\contentsline {subsection}{\numberline {3.4}$lena$图像和$elain$图像的综合处理}{9}
+\contentsline {subsubsection}{\numberline {3.4.1}水平shear}{9}
+\contentsline {subsubsection}{\numberline {3.4.2}旋转}{9}
+\contentsline {subsubsection}{\numberline {3.4.3}插值}{9}

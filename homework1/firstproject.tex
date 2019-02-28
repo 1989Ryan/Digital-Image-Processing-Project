@@ -10,6 +10,7 @@
 \usepackage{algorithm2e}
 \usepackage{setspace}
 \usepackage{diagbox}
+\usepackage{bmpsize}
 \geometry{a4paper,scale=0.75}
 \newcommand{\xiaosi}{\fontsize{11.6pt}{\baselineskip}\selectfont}
 \newcommand{\sihao}{\fontsize{12.1pt}{\baselineskip}\selectfont}
@@ -232,47 +233,47 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 	\centering
 	\subfigure[8bit图像]{
 		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{lena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{lena.png}}
 	\hspace{0.1in} \subfigure[7bit图像]{
 		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{7bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{7bitlena.png}}
 	\hspace{0.1in} \subfigure[6bit图像]{
 		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{6bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{6bitlena.png}}
 	\hspace{0.1in} \subfigure[5bit图像]{
 		\label{5bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{5bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{5bitlena.png}}
 	\newline \subfigure[4bit图像]{
 		\label{4bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{4bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{4bitlena.png}}
 	\hspace{0.1in} \subfigure[3bit图像]{
 		\label{3bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{3bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{3bitlena.png}}
 	\hspace{0.1in} \subfigure[2bit图像]{
 		\label{2bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{2bitlena.bmp}}
+		\includegraphics[width = 0.2\textwidth]{2bitlena.png}}
 	\hspace{0.1in} \subfigure[1bit图像]{
 		\label{1bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{1bitlena.bmp}}	
+		\includegraphics[width = 0.2\textwidth]{1bitlena.png}}	
 	\caption{图像灰度递减结果} 
 	\label{greyscale_reduce_result} %%label for entire figure
 \end{figure}
 
-在这里我们运用了比较简单的降维方式，采用了手写函数实现的方式，这里对算法进行简要介绍。
+在这里我们运用了比较简单的降维方式，采用了手写函数实现的方式，这里对算法\ref{grayscale_reduce_algorithm}进行简要介绍。
 
 \begin{algorithm}[h!]
 	\caption{灰度降维}
 	\label{grayscale_reduce_algorithm}
 	Initialization: Read image information; \\
 	Get Paramter: $Greyscale\_Reduce\_Index$; \\
-	\while{$i \LeqsLant Width\_of\_image$}
+	\While{$i \leqslant Width\_of\_image$}
 	{
-		\while{$j \LeqsLant Height\_of\_image$}
+		\While{$j \leqslant Height\_of\_image$}
 		{
-			\while{$k \LeqsLant Color\_Tunnel$}
+			\While{$k \leqslant Color\_Tunnel$}
 			{
 				$Img\_Pixel_{i,j,k} = \biggl\lfloor\frac{Img\_Pixel_{i,j,k}}{Greyscale\_Reduce\_Index}\biggr\rfloor $ //将像素值变为灰度降维后的位数值 \\
-				$Img\_Pixel_{i,j,k} = Img\_Pixel_{i,j,k} \cdot  255 / \biggl\lfloor\frac{255}{Greyscale\_Reduce\_Index}\biggr\rfloor  $ //将降维后的像素位数值映射到0-255之间
+				$Img\_Pixel_{i,j,k} = Img\_Pixel_{i,j,k} \cdot  255 / \biggl\lfloor\frac{255}{Greyscale\_Reduce\_Index}\biggr\rfloor  $ //将降维后的像 \newline //素位数值映射到0-255之间
 			}
 		}
 	}
