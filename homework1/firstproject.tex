@@ -258,6 +258,26 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 	\label{greyscale_reduce_result} %%label for entire figure
 \end{figure}
 
+在这里我们运用了比较简单的降维方式，采用了手写函数实现的方式，这里对算法进行简要介绍。
+
+\begin{algorithm}[h!]
+	\caption{灰度降维}
+	\label{grayscale_reduce_algorithm}
+	Initialization: Read image information; \\
+	Get Paramter: $Greyscale\_Reduce\_Index$; \\
+	\while{$i \LeqsLant Width\_of\_image$}
+	{
+		\while{$j \LeqsLant Height\_of\_image$}
+		{
+			\while{$k \LeqsLant Color\_Tunnel$}
+			{
+				$Img\_Pixel_{i,j,k} = \biggl\lfloor\frac{Img\_Pixel_{i,j,k}}{Greyscale\_Reduce\_Index}\biggr\rfloor $ //将像素值变为灰度降维后的位数值 \\
+				$Img\_Pixel_{i,j,k} = Img\_Pixel_{i,j,k} \cdot  255 / \biggl\lfloor\frac{255}{Greyscale\_Reduce\_Index}\biggr\rfloor  $ //将降维后的像素位数值映射到0-255之间
+			}
+		}
+	}
+\end{algorithm}
+
 \subsection{$lena$图像的均值方差}
 
 \subsection{$lena$图像的插值}

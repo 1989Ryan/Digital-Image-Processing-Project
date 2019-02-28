@@ -40,13 +40,30 @@ class basic_cv_tool:
                     img[i,j,k] =(img[i,j,k]/ reduce_index) *(255 /(255 / reduce_index))
         return img
 
-    def image_average(self, ImageName):
-        #TODO
-        pass
+    def image_average(self, img):
+        mean = 0
+        shape = img.shape
+        width = shape[0]
+        height = shape[1]
+        for i in range(width):
+            for j in range(height):
+                for k in range(3):
+                    mean = mean + img[i,j,k]
+        mean = mean/(width * height * 3)
+        return mean
     
-    def image_variance(self, ImageName):
-        #TODO
-        pass
+    def image_variance(self, img):
+        mean = self.image_average(img)
+        var = 0
+        shape = img.shape
+        width = shape[0]
+        height = shape[1]
+        for i in range(width):
+            for j in range(height):
+                for k in range(3):
+                    var = var + (img[i,j,k] - mean)**2
+        var = var/(width * height * 3)
+        return var
 
     def image_Nearest_neighbor_interpolation(self, ImageName, Zoom_index):
         #TODO
