@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.2.26)  1 MAR 2019 16:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.2.26)  1 MAR 2019 22:55
 entering extended mode
 **c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/firstproject
 (c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/firstproject.tex
@@ -1468,84 +1468,105 @@ File: elaincubic.png Graphic file (type png)
 <use elaincubic.png>
 Package pdftex.def Info: elaincubic.png  used on input line 290.
 (pdftex.def)             Requested size: 134.44063pt x 134.43944pt.
-<near.png, id=240, 146.5475pt x 132.99687pt>
+<near.png, id=240, 82.80937pt x 82.3075pt>
 File: near.png Graphic file (type png)
 <use near.png>
 Package pdftex.def Info: near.png  used on input line 301.
-(pdftex.def)             Requested size: 134.44063pt x 122.00954pt.
-<linear.png, id=241, 153.57375pt x 146.04562pt>
+(pdftex.def)             Requested size: 134.44063pt x 133.64508pt.
+<linear.png, id=241, 77.28876pt x 80.80188pt>
 File: linear.png Graphic file (type png)
 <use linear.png>
 Package pdftex.def Info: linear.png  used on input line 304.
-(pdftex.def)             Requested size: 134.44063pt x 127.85866pt.
-<cubic.png, id=242, 156.585pt x 161.60374pt>
+(pdftex.def)             Requested size: 134.44063pt x 140.56451pt.
+<cubic.png, id=242, 76.78688pt x 79.29625pt>
 File: cubic.png Graphic file (type png)
 <use cubic.png>
 Package pdftex.def Info: cubic.png  used on input line 307.
-(pdftex.def)             Requested size: 134.44063pt x 138.75458pt.
+(pdftex.def)             Requested size: 134.44063pt x 138.84308pt.
  [9 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainnear.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elaincubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/near.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/linear.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/cubic.png>] [10]
-<lenashearnear.png, id=264, 2055.68pt x 2055.68pt>
+<lenashearorigin.png, id=264, 1284.8pt x 513.92pt>
+File: lenashearorigin.png Graphic file (type png)
+<use lenashearorigin.png>
+Package pdftex.def Info: lenashearorigin.png  used on input line 386.
+(pdftex.def)             Requested size: 224.06544pt x 89.62367pt.
+<lenashearnear.png, id=265, 2055.68pt x 2055.68pt>
 File: lenashearnear.png Graphic file (type png)
 <use lenashearnear.png>
-Package pdftex.def Info: lenashearnear.png  used on input line 386.
+Package pdftex.def Info: lenashearnear.png  used on input line 389.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<lenashearlinear.png, id=265, 2055.68pt x 2055.68pt>
+<lenashearlinear.png, id=266, 2055.68pt x 2055.68pt>
 File: lenashearlinear.png Graphic file (type png)
 <use lenashearlinear.png>
-Package pdftex.def Info: lenashearlinear.png  used on input line 389.
+Package pdftex.def Info: lenashearlinear.png  used on input line 392.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<lenashearcubic.png, id=266, 2055.68pt x 2055.68pt>
+<lenashearcubic.png, id=267, 2055.68pt x 2055.68pt>
 File: lenashearcubic.png Graphic file (type png)
 <use lenashearcubic.png>
-Package pdftex.def Info: lenashearcubic.png  used on input line 392.
+Package pdftex.def Info: lenashearcubic.png  used on input line 395.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainshearnear.png, id=267, 2055.68pt x 2055.68pt>
+<elainshearorigin.png, id=268, 1284.8pt x 513.92pt>
+File: elainshearorigin.png Graphic file (type png)
+<use elainshearorigin.png>
+Package pdftex.def Info: elainshearorigin.png  used on input line 404.
+(pdftex.def)             Requested size: 224.06544pt x 89.62367pt.
+<elainshearnear.png, id=269, 2055.68pt x 2055.68pt>
 File: elainshearnear.png Graphic file (type png)
 <use elainshearnear.png>
-Package pdftex.def Info: elainshearnear.png  used on input line 401.
+Package pdftex.def Info: elainshearnear.png  used on input line 407.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainshearlinear.png, id=268, 2055.68pt x 2055.68pt>
+<elainshearlinear.png, id=270, 2055.68pt x 2055.68pt>
 File: elainshearlinear.png Graphic file (type png)
 <use elainshearlinear.png>
-Package pdftex.def Info: elainshearlinear.png  used on input line 404.
+Package pdftex.def Info: elainshearlinear.png  used on input line 410.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainshearcubic.png, id=269, 2055.68pt x 2055.68pt>
+<elainshearcubic.png, id=271, 2055.68pt x 2055.68pt>
 File: elainshearcubic.png Graphic file (type png)
 <use elainshearcubic.png>
-Package pdftex.def Info: elainshearcubic.png  used on input line 407.
+Package pdftex.def Info: elainshearcubic.png  used on input line 413.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
- [11 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearcubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearcubic.png (PNG copy)>]
-<lenarotationnear.png, id=275, 2055.68pt x 2055.68pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearorigin.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearcubic.png (PNG copy)>]
+<lenarotationnear.png, id=277, 2055.68pt x 2055.68pt>
 File: lenarotationnear.png Graphic file (type png)
 <use lenarotationnear.png>
-Package pdftex.def Info: lenarotationnear.png  used on input line 435.
+Package pdftex.def Info: lenarotationnear.png  used on input line 441.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<lenarotationlinear.png, id=276, 2055.68pt x 2055.68pt>
+<lenarotationlinear.png, id=278, 2055.68pt x 2055.68pt>
 File: lenarotationlinear.png Graphic file (type png)
 <use lenarotationlinear.png>
-Package pdftex.def Info: lenarotationlinear.png  used on input line 438.
+Package pdftex.def Info: lenarotationlinear.png  used on input line 444.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<lenarotationcubic.png, id=277, 2055.68pt x 2055.68pt>
+<lenarotationcubic.png, id=279, 2055.68pt x 2055.68pt>
 File: lenarotationcubic.png Graphic file (type png)
 <use lenarotationcubic.png>
-Package pdftex.def Info: lenarotationcubic.png  used on input line 441.
+Package pdftex.def Info: lenarotationcubic.png  used on input line 447.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainrotationnear.png, id=278, 2055.68pt x 2055.68pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<elainrotationnear.png, id=280, 2055.68pt x 2055.68pt>
 File: elainrotationnear.png Graphic file (type png)
 <use elainrotationnear.png>
-Package pdftex.def Info: elainrotationnear.png  used on input line 450.
+Package pdftex.def Info: elainrotationnear.png  used on input line 456.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainrotationlinear.png, id=279, 2055.68pt x 2055.68pt>
+<elainrotationlinear.png, id=281, 2055.68pt x 2055.68pt>
 File: elainrotationlinear.png Graphic file (type png)
 <use elainrotationlinear.png>
-Package pdftex.def Info: elainrotationlinear.png  used on input line 453.
+Package pdftex.def Info: elainrotationlinear.png  used on input line 459.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
-<elainotationcubic.png, id=280, 2055.68pt x 2055.68pt>
+<elainotationcubic.png, id=282, 2055.68pt x 2055.68pt>
 File: elainotationcubic.png Graphic file (type png)
 <use elainotationcubic.png>
-Package pdftex.def Info: elainotationcubic.png  used on input line 456.
+Package pdftex.def Info: elainotationcubic.png  used on input line 462.
 (pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
- [12 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationcubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainotationcubic.png (PNG copy)>] [13] [14] (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearorigin.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearcubic.png (PNG copy)>] [13 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationcubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainotationcubic.png (PNG copy)>] (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.94002pt have occurred.
@@ -1555,17 +1576,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19604 strings out of 493305
- 349566 string characters out of 3143544
- 392087 words of memory out of 3000000
- 22433 multiletter control sequences out of 15000+200000
- 609506 words of font info for 320 fonts, out of 3000000 for 9000
+ 19620 strings out of 493305
+ 349900 string characters out of 3143544
+ 392111 words of memory out of 3000000
+ 22445 multiletter control sequences out of 15000+200000
+ 610046 words of font info for 322 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,20n,56p,10504b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on firstproject.pdf (14 pages, 17572230 bytes).
+Output written on firstproject.pdf (13 pages, 18124095 bytes).
 PDF statistics:
- 730 PDF objects out of 1000 (max. 8388607)
+ 729 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 
