@@ -2,7 +2,7 @@
 !*.md
 !*.py
 !.gitignore
-!*.jpeg
+!*.jpg
 !*.png
 !*.bmp
 !*.tex
