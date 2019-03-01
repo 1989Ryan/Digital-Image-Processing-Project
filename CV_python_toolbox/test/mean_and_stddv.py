@@ -5,7 +5,7 @@ lib_path = os.path.abspath(os.path.join(sys.path[0], '..'))
 sys.path.append(lib_path)
 from src.basic_cv_tool import *
 
-image_2_name = '../../homework1/lena.bmp'
+image_2_name = '../../homework1/elain1.bmp'
 
 tool = basic_cv_tool(image_2_name)
 img = tool.ImageRead(image_2_name)
