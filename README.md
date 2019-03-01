@@ -8,7 +8,7 @@ The basic computer vision toolbox for python. Built for first project assignment
 
 ### prerequisite
 
-Although no one cares a shit on that project, this toolbox needs python-opencv.
+Although no one cares a shit about that project, this toolbox needs python-opencv.
 
 ## homework1
 
