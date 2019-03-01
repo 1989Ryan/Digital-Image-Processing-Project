@@ -74,7 +74,7 @@
 
 （5）把$lena$和$elain$图像分别进行水平剪切（参数可设置为1.5，或者自行选择）和旋转30度，并采用用近邻、双线性和双三次插值法放大到$2048\times2048$；
 
-\section{BMP图像简介}
+\section{bmp图像简介}
 BMP取自位图\textbf{B}it\textbf{M}a\textbf{P}的缩写，也称为DIB（与设备无关的位图），是一种与显示器无关的位图数字图像文件格式。常见于微软视窗和OS/2操作系统，Windows GDI API内部使用的DIB数据结构与 BMP 文件格式几乎相同。
 
 图像通常保存的颜色深度有2（1位）、16（4位）、256（8位）、65536（16位）和1670万（24位）种颜色（其中位是表示每点所用的数据位）。8位图像可以是索引彩色图像外，也可以是灰阶图像。表示透明的alpha通道也可以保存在一个类似于灰阶图像的独立文件中。带有集成的alpha通道的32位版本已经随着Windows XP出现，它在视窗的登录和主题系统中都有使用\upcite{MSdoc}。
@@ -101,31 +101,6 @@ BMP取自位图\textbf{B}it\textbf{M}a\textbf{P}的缩写，也称为DIB（与�
 \end{figure}
 
 在前面的示例中，使用16种颜色的调色板在VGA显示设备上创建像素矩形。16色调色板需要4位索引; 因此，将调色板颜色映射到像素颜色的数组也由4位索引组成。
-
-\subsection{存储算法}
-
-BMP文件通常是不压缩的，所以它们通常比同一幅图像的压缩图像文件格式要大很多。例如，一个800×600的24位几乎占据1.4MB空间。因此它们通常不适合在因特网或者其他低速或者有容量限制的介质上进行传输。
-根据颜色深度的不同，图像上的一个像素可以用一个或者多个字节表示，它由n/8所确定（n是位深度，1字节包含8个数据位）。图片浏览器等基于字节的ASCII值计算像素的颜色，然后从调色板中读出相应的值。
-
-n位2n种颜色的包含调色板的位图近似字节数可以用下面的公式\ref{bmpsize}进行计算：
-
-\begin{equation}\label{bmpsize}
-    54+4\cdot2^n+\frac{width \cdot height \cdot n}{8}
-\end{equation}
-
-其中高度（height）和宽度（width）都以像素为单位。
-
-需要注意的是上面公式中的\textbf{54}是位图文件的文件头，\textbf{$4*2^n$}是彩色调色板的大小。 如果位图文件不包含调色板，如24位，32位位图，则位图的近似字节数可以用下面的公式\ref{bmpsize2}进行计算：
-
-\begin{equation}\label{bmpsize2}
-    54+\frac{width \cdot height \cdot n}{8}
-\end{equation}
-
-其中高度（height）和宽度（width）都以像素为单位\upcite{Wiki}。
-
-另外需要注意的是这是一个近似值，对于n位的位图图像来说，尽管可能有最多$2^n$种颜色，一个特定的图像可能并不会使用这些所有的颜色。由于彩色调色板仅仅定义了图像所用的颜色，所以实际的彩色调色板将小于$4*2^n$。
-
-由于存储算法本身决定的因素，根据几个图像参数的不同计算出的大小与实际的文件大小将会有一些细小的差别。
 
 \subsection{文件格式}
 
@@ -281,35 +256,140 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 
 \subsection{$lena$图像的均值方差}
 
-图像的均值方差计算很容易，通过numpy的矩阵运算方法，可以得到$lena.bmp$和$elain.bmp$的图像的均值和方差。
+图像的均值方差计算很容易，通过numpy的矩阵运算方法，可以得到$lena.bmp$和$elain.bmp$的图像的均值和方差，计算结果如表\ref{mean_var}所示。
 
 \begin{table}[h!]
-
+	\centering
+	\begin{tabular}{|m{2cm}<{\centering}|m{3cm}<{\centering}|m{3cm}<{\centering}|}
+		\hline
+		$image$ & $mean$ & $variance$ \\
+		\hline
+		$lena$ & 99.0512 & 2796.0318 \\
+		\hline
+		$elain$ & 135.3779 & 2120.6471\\
+		\hline
+	\end{tabular}
+	\caption{lena和elain图片的均值与方差}
+	\label{mean_var}
 \end{table}
 
 \subsection{$lena$图像的插值}
 
-\subsubsection{最邻近插值}
-
-\subsubsection{双线性插值}
-
-\subsubsection{双三次插值}
-
-\subsection{$lena$图像和$elain$图像的综合处理}
-
-\subsubsection{水平shear}
+我们分别对图像进行最邻近插值，双线性插值和双三次插值，分别得到了三幅不同的图像，我将从图像和算法两个方面对这三个结果进行展示，插值的结果如图所示\ref{interpolation_result}。
 
 \begin{figure}[h!]
 	\centering
+	\subfigure[最邻近插值的图像]{
+		\label{shear_elain1} %%first figure label
+		\includegraphics[width = 0.3\textwidth]{elainnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值的图像]{
+		\label{shear_elain2} %%second figure label
+		\includegraphics[width = 0.3\textwidth]{elainlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值的图像]{
+		\label{shear_elain3} %%second figure label
+		\includegraphics[width = 0.3\textwidth]{elaincubic.png}}
+	\caption{插值结果} 
+	\label{interpolation_result} %%label for entire figure
+\end{figure}
+
+我们可以对图片进行放大，观察其细节，如图\ref{interpolation_result2}所示。
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[最邻近插值]{
+		\label{shear_elain1} %%first figure label
+		\includegraphics[width = 0.3\textwidth]{near.png}}
+	\hspace{0.1in} \subfigure[双线性插值]{
+		\label{shear_elain2} %%second figure label
+		\includegraphics[width = 0.3\textwidth]{linear.png}}
+	\hspace{0.1in} \subfigure[双三次插值]{
+		\label{shear_elain3} %%second figure label
+		\includegraphics[width = 0.3\textwidth]{cubic.png}}
+	\caption{插值结果放大} 
+	\label{interpolation_result2} %%label for entire figure
+\end{figure}
+
+从图像细节中可以看出，最邻近插值的方法表现出的效果较差，区域模糊化明显，同时双线性内插的效果较最邻近内插有重大改进，而双三次内插的结果较双线性内插的结果稍微清晰一些，这和我们的设想一致。
+
+\subsubsection{最邻近插值}
+
+最邻近内插的方法是将原图像中最临近的灰度赋值给每个新的位置，这种方法简单，但是会有很多缺陷，如很多边缘的失真，由于这些缺陷，实际上这样的插值方法并不常用。
+
+\subsubsection{双线性插值}
+
+双线性内插的效果较最邻近内插有了明显的改观，其原理如下。
+
+我们用$(x,y)$来表示我们想要赋以灰度值的位置，并令$v(x,y)$表示灰度，则对于双线性内插来说，赋值公式\ref{bilinear}为:
+
+\begin{equation}\label{bilinear}
+	v(x,y) = ax + by + cxy + d
+\end{equation}
+
+式中，4个系数可用由点$(x,y)$的四个最邻近的点写出的未知方程确定。不过，这也增加了插值的计算量\upcite{dip}。
+
+\subsubsection{双三次插值}
+
+双三次内插的效果较双线性内插有了更加清晰的效果，其赋值公式\ref{bicubic}为:
+
+\begin{equation}\label{bicubic}
+	v(x,y) = \sum_{i=0}^{3} \sum_{j=0}^{3} a_{i,j}x^{i}y^{j}
+\end{equation}
+
+式中，16个系数可用由点$(x,y)$的16个最邻近的点写出的未知方程确定。双三次插值在保持细节方面比双线性插值做的要更好\upcite{dip}。
+
+\subsection{$lena$图像和$elain$图像的仿射变换和插值处理}
+
+下面我们将介绍利用图像的仿射变换，对图像进行水平偏移错切和旋转的操作。最常用的空间坐标变化是仿射变换，其一般形式如公式\ref{Trans2}所示\upcite{dip}。
+\begin{equation}\label{Trans2}
+	\left( \begin{array}{ccc}
+		x & y & 1
+		\end{array} \right)
+		=
+	\left( \begin{array}{ccc}
+		v & w & 1
+		\end{array} \right) T
+		=
+	\left( \begin{array}{ccc}
+		v & w & 1
+		\end{array} \right) 
+	\left( \begin{array}{ccc}
+		t_{1,1}  & t_{1,2}  & 0  \\
+		t_{2,1}  & t_{2,2} & 0 \\
+		t_{3,1} & t_{3,2} & 1 
+		\end{array} \right)
+\end{equation}
+式中，$(v,w)$是原图像中像素的坐标，$(x,y)$是变换后图像的坐标。通过仿射变换我们可以实现图像的水平偏移和旋转等操作。
+
+\subsubsection{水平偏移}
+
+水平偏移是通过图片的仿射变换来完成的，如公式\ref{trans}所示\upcite{dip}。
+\begin{equation}\label{trans}
+	\left( \begin{array}{ccc}
+		x & y & 1
+		\end{array} \right)
+		=
+	\left( \begin{array}{ccc}
+		v & w & 1
+		\end{array} \right) 
+	\left( \begin{array}{ccc}
+		1  & S_{h}  & 0  \\
+		0  & 1 & 0 \\
+		0 & 0 & 1 
+		\end{array} \right)
+\end{equation}
+
+将$S_{h}$的值设为1.5，可以得到图\ref{shear_result1}和图\ref{shear_result2}。
+\begin{figure}[h!]
+	\centering
 	\subfigure[最邻近插值后的图像]{
-		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{lenashearnear.png}}
+		\label{shear_lena1} %%first figure label
+		\includegraphics[width = 0.25\textwidth]{lenashearnear.png}}
 	\hspace{0.1in} \subfigure[双线性插值后的图像]{
-		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{lenashearlinear.png}}
+		\label{shear_lena2} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{lenashearlinear.png}}
 	\hspace{0.1in} \subfigure[双三次插值后的图像]{
-		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{lenashearcubic.png}}
+		\label{shear_lena3} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{lenashearcubic.png}}
 	\caption{lena图像水平偏移变换并插值的结果} 
 	\label{shear_result1} %%label for entire figure
 \end{figure}
@@ -317,87 +397,84 @@ OS/2 BITMAPCOREHEADER2 24位色图像则可以使用24位RLE算法压缩。
 \begin{figure}[h!]
 	\centering
 	\subfigure[最邻近插值后的图像]{
-		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{elainshearnear.png}}
+		\label{shear_elain1} %%first figure label
+		\includegraphics[width = 0.25\textwidth]{elainshearnear.png}}
 	\hspace{0.1in} \subfigure[双线性插值后的图像]{
-		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{elainshearlinear.png}}
+		\label{shear_elain2} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{elainshearlinear.png}}
 	\hspace{0.1in} \subfigure[双三次插值后的图像]{
-		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{elainshearcubic.png}}
+		\label{shear_elain3} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{elainshearcubic.png}}
 	\caption{elain图像水平偏移变换并插值的结果} 
 	\label{shear_result2} %%label for entire figure
 \end{figure}
 
 \subsubsection{旋转}
 
-\begin{figure}[h!]
-	\centering
-	\subfigure[最邻近插值后的图像]{
-		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{lenarotationnear.png}}
-	\hspace{0.1in} \subfigure[双线性插值后的图像]{
-		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{lenarotationlinear.png}}
-	\hspace{0.1in} \subfigure[双三次插值后的图像]{
-		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{lenarotationcubic.png}}
-	\caption{lena图像旋转30°变换并插值的结果} 
-	\label{shear_result1} %%label for entire figure
-\end{figure}
+旋转变换也是通过图片的仿射变换来完成的，如公式\ref{trans2}所示\upcite{dip}。
+\begin{equation}\label{trans2}
+	\left( \begin{array}{ccc}
+		x & y & 1
+		\end{array} \right)
+		=
+	\left( \begin{array}{ccc}
+		v & w & 1
+		\end{array} \right) 
+	\left( \begin{array}{ccc}
+		cos\theta  & sin\theta  & 0  \\
+		-sin\theta  & cos\theta & 0 \\
+		0 & 0 & 1 
+		\end{array} \right)
+\end{equation}
+将$\theta$的值设为30度，可以得到图\ref{rotation_result1}和图\ref{rotation_result2}。
 
 \begin{figure}[h!]
 	\centering
 	\subfigure[最邻近插值后的图像]{
-		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{elainrotationnear.png}}
+		\label{rotate_lena1} %%first figure label
+		\includegraphics[width = 0.25\textwidth]{lenarotationnear.png}}
 	\hspace{0.1in} \subfigure[双线性插值后的图像]{
-		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{elainrotationlinear.png}}
+		\label{rotate_lena2} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{lenarotationlinear.png}}
 	\hspace{0.1in} \subfigure[双三次插值后的图像]{
-		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{elainrotationcubic.png}}
-	\caption{elain图像旋转30°变换并插值的结果} 
-	\label{shear_result2} %%label for entire figure
+		\label{rotate_lena3} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{lenarotationcubic.png}}
+	\caption{lena图像旋转30度变换并插值的结果} 
+	\label{rotation_result1} %%label for entire figure
 \end{figure}
-
-
-\subsubsection{插值}
 
 \begin{figure}[h!]
 	\centering
-	\subfigure[8bit图像]{
-		\label{8bitlena} %%first figure label
-		\includegraphics[width = 0.2\textwidth]{lena.png}}
-	\hspace{0.1in} \subfigure[7bit图像]{
-		\label{7bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{7bitlena.png}}
-	\hspace{0.1in} \subfigure[6bit图像]{
-		\label{6bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{6bitlena.png}}
-	\newline \subfigure[4bit图像]{
-		\label{4bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{4bitlena.png}}
-	\hspace{0.1in} \subfigure[3bit图像]{
-		\label{3bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{3bitlena.png}}
-	\hspace{0.1in} \subfigure[2bit图像]{
-		\label{2bitlena} %%second figure label
-		\includegraphics[width = 0.2\textwidth]{2bitlena.png}}
-	\caption{图像灰度递减结果} 
-	\label{interpolation_result} %%label for entire figure
+	\subfigure[最邻近插值后的图像]{
+		\label{rotate_elain1} %%first figure label
+		\includegraphics[width = 0.25\textwidth]{elainrotationnear.png}}
+	\hspace{0.1in} \subfigure[双线性插值后的图像]{
+		\label{rotate_elain2} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{elainrotationlinear.png}}
+	\hspace{0.1in} \subfigure[双三次插值后的图像]{
+		\label{rotate_elain3} %%second figure label
+		\includegraphics[width = 0.25\textwidth]{elainotationcubic.png}}
+	\caption{elain图像旋转30度变换并插值的结果} 
+	\label{rotation_result2} %%label for entire figure
 \end{figure}
 
+\section{小结}
+
+本次作业，通过实践，我深入了解了图像处理的相关基础知识，同时也提高了动手能力，加深了理解和掌握程度，也让我拥有了解决实际问题的基本功。同时，代码能力也得到了有效锻炼，
+我的python能力得到了有效锻炼，同时也学习了opencv的很多基本功能。我自行组织的$cv toolbox$在我的$github$上维护，欢迎访问 \newline $https://github.com/1989Ryan/Digital-Image-Processing-Project$进行了解.
 
 \newpage
+
 \begin{thebibliography}{}
     \bibitem{MSdoc} Microsoft Windows Dev Center, 
     Windows GDI, ``Bitmap", [online] available: 
     \newline $https://docs.microsoft.com/en-us/windows/desktop/gdi/bitmaps$  
-    (Febrary, 26, 2019)
+    (Febrary, 26, 2019).
 
 	\bibitem{Wiki} Wikipedia, BMP file format, [online] available: \newline 
-	$https://en.wikipedia.org/wiki/BMP\_file\_format$ (Febrary, 26, 2019)
+	$https://en.wikipedia.org/wiki/BMP\_file\_format$ (Febrary, 26, 2019).
+
+	\bibitem{dip} Rafael C. Gonzalez，Richard E. Woods，数字图像处理. 北京: 电子工业出版社, 2017.5.
 
 \end{thebibliography}
 

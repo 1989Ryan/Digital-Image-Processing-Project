@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.2.26)  28 FEB 2019 17:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.2.26)  1 MAR 2019 16:22
 entering extended mode
 **c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/firstproject
 (c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/firstproject.tex
@@ -1160,7 +1160,26 @@ File: UTF8.bdg 2015/04/18 4.8.4
 File: UTF8.enc 2015/04/18 4.8.4
 ) (D:\latex\miktex\tex\latex\cjk\UTF8\UTF8.chr
 File: UTF8.chr 2015/04/18 4.8.4
-) (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux)
+) (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux
+
+LaTeX Warning: Label `shear_elain1' multiply defined.
+
+
+LaTeX Warning: Label `shear_elain2' multiply defined.
+
+
+LaTeX Warning: Label `shear_elain3' multiply defined.
+
+
+LaTeX Warning: Label `shear_elain1' multiply defined.
+
+
+LaTeX Warning: Label `shear_elain2' multiply defined.
+
+
+LaTeX Warning: Label `shear_elain3' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
@@ -1363,86 +1382,190 @@ Overfull \hbox (3.57318pt too wide) in paragraph at lines 80--81
  []
 
 [3]
-<bmpexample.png, id=165, 469.755pt x 377.41pt>
+<bmpexample.png, id=167, 469.755pt x 377.41pt>
 File: bmpexample.png Graphic file (type png)
 <use bmpexample.png>
 Package pdftex.def Info: bmpexample.png  used on input line 98.
 (pdftex.def)             Requested size: 268.88127pt x 216.0243pt.
- [4 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/bmpexample.png>] [5] [6]
-Overfull \hbox (5.04254pt too wide) in paragraph at lines 182--183
+ [4 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/bmpexample.png>] [5]
+Overfull \hbox (5.04254pt too wide) in paragraph at lines 157--158
 [] |\C70/rm/m/n/11.6/ff |\OT1/cmr/m/n/11.6 6|\C70/rm/m/n/11.6/ff 	| \C70/rm/m/n/11.6/6b Ï \C70/rm/m/n/11.6/50 Ï \C70/rm/m/n/11.6/7d   \C70/rm/m/n/11.6/53 `\OT1/cmr/m/n/11.6 24\C70/rm/m/n/11.6/4f M |\C70/rm/m/n/11.6/ff |\C70/rm/m/n/11.6/82 r \C70/rm/m/n/11.6/6d ñ \C70/rm/m/n/11.6/4e :\OT1/cmr/m/n/11.6 24\C70/rm/m/n/11.6/4f M|\C70/rm/m/n/11.6/ff | \OT1/cmr/m/n/11.6 24bpp|\C70/rm/m/n/11.6/ff 	| \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/68 < \C70/rm/m/n/11.6/5f  \C70/rm/m/n/11.6/65 / \C70/rm/m/n/11.6/63 \OT1/cmr/m/n/11.6 16777216\C70/rm/m/n/11.6/79 Í \C70/rm/m/n/11.6/4e  \C70/rm/m/n/11.6/54  \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/98 œ \C70/rm/m/n/11.6/82 r|\C70/rm/m/n/11.6/ff | \C70/rm/m/n/11.6/6b Ï\OT1/cmr/m/n/11.6 3\C70/rm/m/n/11.6/4e *
  []
 
-[7]
-Overfull \hbox (5.01079pt too wide) in paragraph at lines 225--227
+[6]
+Overfull \hbox (5.01079pt too wide) in paragraph at lines 200--202
 \C70/rm/m/n/11.6/4e † \C70/rm/m/n/11.6/67 * e \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/4f \ \C70/rm/m/n/11.6/4e  \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/59  \C70/rm/m/n/11.6/74  \C70/rm/m/n/11.6/65 ¹ \C70/rm/m/n/11.6/4f ¿|\C70/rm/m/n/11.6/ff | \C70/rm/m/n/11.6/62  \C70/rm/m/n/11.6/52  \C70/rm/m/n/11.6/5e ú \C70/rm/m/n/11.6/4e †   * \C70/rm/m/n/11.6/75 ( \C70/rm/m/n/11.6/67 e \C70/rm/m/n/11.6/59  \C70/rm/m/n/11.6/74  \C70/rm/m/n/11.6/65 p \C70/rm/m/n/11.6/5b W \C70/rm/m/n/11.6/56 þ \C70/rm/m/n/11.6/50 Ï \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/5d å \C70/rm/m/n/11.6/51 w \C70/rm/m/n/11.6/53 $\OT1/cmr/m/n/11.6 \\OML/cmm/m/it/11.6 CVpythontoolbox[]$|\C70/rm/m/n/11.6/ff |
  []
 
-<lena.png, id=208, 513.92pt x 513.92pt>
+<lena.png, id=199, 513.92pt x 513.92pt>
 File: lena.png Graphic file (type png)
 <use lena.png>
-Package pdftex.def Info: lena.png  used on input line 236.
+Package pdftex.def Info: lena.png  used on input line 211.
 (pdftex.def)             Requested size: 89.6248pt x 89.62367pt.
-<7bitlena.png, id=210, 385.44pt x 385.44pt>
+<7bitlena.png, id=201, 385.44pt x 385.44pt>
 File: 7bitlena.png Graphic file (type png)
 <use 7bitlena.png>
-Package pdftex.def Info: 7bitlena.png  used on input line 239.
+Package pdftex.def Info: 7bitlena.png  used on input line 214.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<6bitlena.png, id=211, 385.44pt x 385.44pt>
+<6bitlena.png, id=202, 385.44pt x 385.44pt>
 File: 6bitlena.png Graphic file (type png)
 <use 6bitlena.png>
-Package pdftex.def Info: 6bitlena.png  used on input line 242.
+Package pdftex.def Info: 6bitlena.png  used on input line 217.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<5bitlena.png, id=212, 385.44pt x 385.44pt>
+<5bitlena.png, id=203, 385.44pt x 385.44pt>
 File: 5bitlena.png Graphic file (type png)
 <use 5bitlena.png>
-Package pdftex.def Info: 5bitlena.png  used on input line 245.
+Package pdftex.def Info: 5bitlena.png  used on input line 220.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<4bitlena.png, id=213, 385.44pt x 385.44pt>
+<4bitlena.png, id=204, 385.44pt x 385.44pt>
 File: 4bitlena.png Graphic file (type png)
 <use 4bitlena.png>
-Package pdftex.def Info: 4bitlena.png  used on input line 248.
+Package pdftex.def Info: 4bitlena.png  used on input line 223.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<3bitlena.png, id=214, 385.44pt x 385.44pt>
+<3bitlena.png, id=205, 385.44pt x 385.44pt>
 File: 3bitlena.png Graphic file (type png)
 <use 3bitlena.png>
-Package pdftex.def Info: 3bitlena.png  used on input line 251.
+Package pdftex.def Info: 3bitlena.png  used on input line 226.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<2bitlena.png, id=215, 385.44pt x 385.44pt>
+<2bitlena.png, id=206, 385.44pt x 385.44pt>
 File: 2bitlena.png Graphic file (type png)
 <use 2bitlena.png>
-Package pdftex.def Info: 2bitlena.png  used on input line 254.
+Package pdftex.def Info: 2bitlena.png  used on input line 229.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
-<1bitlena.png, id=216, 385.44pt x 385.44pt>
+<1bitlena.png, id=207, 385.44pt x 385.44pt>
 File: 1bitlena.png Graphic file (type png)
 <use 1bitlena.png>
-Package pdftex.def Info: 1bitlena.png  used on input line 257.
+Package pdftex.def Info: 1bitlena.png  used on input line 232.
 (pdftex.def)             Requested size: 89.6248pt x 89.61975pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 268.
+(Font)              size <10.95> substituted on input line 243.
 
-[8] [9 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/7bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/6bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/5bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/4bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/3bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/2bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/1bitlena.png>] [10] (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (40.43701pt too wide) in paragraph at lines 259--260
+[]\C70/rm/m/n/11.6/56 þ \C70/rm/m/n/11.6/50 Ï \C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/57 G \C70/rm/m/n/11.6/50 < \C70/rm/m/n/11.6/65 ¹ \C70/rm/m/n/11.6/5d î \C70/rm/m/n/11.6/8b ¡ \C70/rm/m/n/11.6/7b — \C70/rm/m/n/11.6/5f ˆ \C70/rm/m/n/11.6/5b ¹ \C70/rm/m/n/11.6/66 |\C70/rm/m/n/11.6/ff | \C70/rm/m/n/11.6/90  \C70/rm/m/n/11.6/8f Ç\OT1/cmr/m/n/11.6 numpy\C70/rm/m/n/11.6/76 „ \C70/rm/m/n/11.6/77 é \C70/rm/m/n/11.6/96 5 \C70/rm/m/n/11.6/8f Ð \C70/rm/m/n/11.6/7b — \C70/rm/m/n/11.6/65 ¹ \C70/rm/m/n/11.6/6c Õ|\C70/rm/m/n/11.6/ff | \C70/rm/m/n/11.6/53 ï \C70/rm/m/n/11.6/4e å \C70/rm/m/n/11.6/5f — \C70/rm/m/n/11.6/52 0$\OML/cmm/m/it/11.6 lena:bmp$\C70/rm/m/n/11.6/54 Œ$\OML/cmm/m/it/11.6 elain:bmp$\C70/rm/m/n/11.6/76 „
+ []
+
+[7] [8 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/7bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/6bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/5bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/4bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/3bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/2bitlena.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/1bitlena.png>]
+<elainnear.png, id=238, 1541.76pt x 1541.76pt>
+File: elainnear.png Graphic file (type png)
+<use elainnear.png>
+Package pdftex.def Info: elainnear.png  used on input line 284.
+(pdftex.def)             Requested size: 134.44063pt x 134.42375pt.
+<elainlinear.png, id=239, 2055.68pt x 2055.68pt>
+File: elainlinear.png Graphic file (type png)
+<use elainlinear.png>
+Package pdftex.def Info: elainlinear.png  used on input line 287.
+(pdftex.def)             Requested size: 134.44063pt x 134.43944pt.
+<elaincubic.png, id=240, 2055.68pt x 2055.68pt>
+File: elaincubic.png Graphic file (type png)
+<use elaincubic.png>
+Package pdftex.def Info: elaincubic.png  used on input line 290.
+(pdftex.def)             Requested size: 134.44063pt x 134.43944pt.
+<near.png, id=241, 146.5475pt x 132.99687pt>
+File: near.png Graphic file (type png)
+<use near.png>
+Package pdftex.def Info: near.png  used on input line 301.
+(pdftex.def)             Requested size: 134.44063pt x 122.00954pt.
+<linear.png, id=242, 153.57375pt x 146.04562pt>
+File: linear.png Graphic file (type png)
+<use linear.png>
+Package pdftex.def Info: linear.png  used on input line 304.
+(pdftex.def)             Requested size: 134.44063pt x 127.85866pt.
+<cubic.png, id=243, 156.585pt x 161.60374pt>
+File: cubic.png Graphic file (type png)
+<use cubic.png>
+Package pdftex.def Info: cubic.png  used on input line 307.
+(pdftex.def)             Requested size: 134.44063pt x 138.75458pt.
+ [9 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainnear.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elaincubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/near.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/linear.png> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/cubic.png>] [10]
+<lenashearnear.png, id=265, 2055.68pt x 2055.68pt>
+File: lenashearnear.png Graphic file (type png)
+<use lenashearnear.png>
+Package pdftex.def Info: lenashearnear.png  used on input line 386.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<lenashearlinear.png, id=266, 2055.68pt x 2055.68pt>
+File: lenashearlinear.png Graphic file (type png)
+<use lenashearlinear.png>
+Package pdftex.def Info: lenashearlinear.png  used on input line 389.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<lenashearcubic.png, id=267, 2055.68pt x 2055.68pt>
+File: lenashearcubic.png Graphic file (type png)
+<use lenashearcubic.png>
+Package pdftex.def Info: lenashearcubic.png  used on input line 392.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainshearnear.png, id=268, 2055.68pt x 2055.68pt>
+File: elainshearnear.png Graphic file (type png)
+<use elainshearnear.png>
+Package pdftex.def Info: elainshearnear.png  used on input line 401.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainshearlinear.png, id=269, 2055.68pt x 2055.68pt>
+File: elainshearlinear.png Graphic file (type png)
+<use elainshearlinear.png>
+Package pdftex.def Info: elainshearlinear.png  used on input line 404.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainshearcubic.png, id=270, 2055.68pt x 2055.68pt>
+File: elainshearcubic.png Graphic file (type png)
+<use elainshearcubic.png>
+Package pdftex.def Info: elainshearcubic.png  used on input line 407.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+ [11 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenashearcubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainshearcubic.png (PNG copy)>]
+<lenarotationnear.png, id=276, 2055.68pt x 2055.68pt>
+File: lenarotationnear.png Graphic file (type png)
+<use lenarotationnear.png>
+Package pdftex.def Info: lenarotationnear.png  used on input line 435.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<lenarotationlinear.png, id=277, 2055.68pt x 2055.68pt>
+File: lenarotationlinear.png Graphic file (type png)
+<use lenarotationlinear.png>
+Package pdftex.def Info: lenarotationlinear.png  used on input line 438.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<lenarotationcubic.png, id=278, 2055.68pt x 2055.68pt>
+File: lenarotationcubic.png Graphic file (type png)
+<use lenarotationcubic.png>
+Package pdftex.def Info: lenarotationcubic.png  used on input line 441.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainrotationnear.png, id=279, 2055.68pt x 2055.68pt>
+File: elainrotationnear.png Graphic file (type png)
+<use elainrotationnear.png>
+Package pdftex.def Info: elainrotationnear.png  used on input line 450.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainrotationlinear.png, id=280, 2055.68pt x 2055.68pt>
+File: elainrotationlinear.png Graphic file (type png)
+<use elainrotationlinear.png>
+Package pdftex.def Info: elainrotationlinear.png  used on input line 453.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+<elainotationcubic.png, id=281, 2055.68pt x 2055.68pt>
+File: elainotationcubic.png Graphic file (type png)
+<use elainotationcubic.png>
+Package pdftex.def Info: elainotationcubic.png  used on input line 456.
+(pdftex.def)             Requested size: 112.03271pt x 112.01195pt.
+ [12 <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/lenarotationcubic.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationnear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainrotationlinear.png (PNG copy)> <c:/Users/home/Desktop/dip/Digital-Image-Processing-Project/homework1/elainotationcubic.png (PNG copy)>] [13] [14] (c:\Users\home\Desktop\dip\Digital-Image-Processing-Project\homework1\firstproject.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.94002pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 19369 strings out of 493305
- 345464 string characters out of 3143544
- 387812 words of memory out of 3000000
- 22245 multiletter control sequences out of 15000+200000
- 602756 words of font info for 295 fonts, out of 3000000 for 9000
+ 19604 strings out of 493305
+ 349566 string characters out of 3143544
+ 392087 words of memory out of 3000000
+ 22433 multiletter control sequences out of 15000+200000
+ 609506 words of font info for 320 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,20n,56p,10504b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on firstproject.pdf (10 pages, 1784467 bytes).
+<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/latex/miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on firstproject.pdf (14 pages, 17574874 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
+ 731 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 
