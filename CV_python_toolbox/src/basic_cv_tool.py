@@ -88,5 +88,6 @@ class basic_cv_tool:
         return fea_point
     
     def Getting_H_Matrix(self, img_points_1, img_points_2):
-        H_matrix = ((img_points_2.transpose()).dot(img_points_1)).dot(np.linalg.inv((img_points_1.transpose()).dot(img_points_1)))[:2]
-        return H_matrix
+        H_matrix = ((img_points_2.transpose()).dot(img_points_1)).dot(np.linalg.inv((img_points_1.transpose()).dot(img_points_1)))
+        print(H_matrix)
+        return H_matrix[:2]
