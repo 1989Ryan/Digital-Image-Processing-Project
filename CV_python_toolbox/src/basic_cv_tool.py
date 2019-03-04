@@ -4,7 +4,7 @@ import base64
 import struct
 import numpy as np
 from scipy import interpolate
-
+from pylab import *
 from PIL import Image
 
 class basic_cv_tool:
@@ -78,3 +78,15 @@ class basic_cv_tool:
             ],dtype=np.float32)
         img = cv2.warpAffine(img,rotate_matrix, (int(img.shape[0]*(np.cos(theta)+np.sin(theta))),int(img.shape[1]*(np.cos(theta)+np.sin(theta)))))
         return img
+    
+    def interest_point_choosing(self, ImageName):
+        img = array(Image.open(ImageName))
+        imshow(img)
+        fea_point = ginput(7)
+        fea_point = np.float32(fea_point)
+        fea_point = np.column_stack((fea_point,array([1,1,1,1,1,1,1])))
+        return fea_point
+    
+    def Getting_H_Matrix(self, img_points_1, img_points_2):
+        H_matrix = ((img_points_2.transpose()).dot(img_points_1)).dot(np.linalg.inv((img_points_1.transpose()).dot(img_points_1)))[:2]
+        return H_matrix
