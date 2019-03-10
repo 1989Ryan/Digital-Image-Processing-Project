@@ -20,3 +20,7 @@ If you want to use my paper structure, you have to install a considerable number
 
 Second project assignment report.
 
+## homework3
+
+Third project assignment report and supporting materials.
+The toolbox has updated to the latest version which contains all the tools for image histogram equalization, histogram specialization, local histogram transformation and image segmentation using histogram thresholding.
