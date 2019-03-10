@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import base64
 import struct
 import numpy as np
-from scipy import interpolate
+from scipy.interpolate import interp1d
 from pylab import *
 from PIL import Image
 
@@ -13,7 +13,7 @@ class basic_cv_tool:
         self.ImageName = ImageName
 
     def ImageRead(self, ImageName):
-        img = cv2.imread(ImageName)
+        img = cv2.imread(ImageName, 0)
         return img
     
     def BMP_information_analysis(self, ImageName):
@@ -52,6 +52,7 @@ class basic_cv_tool:
 
     def image_Nearest_neighbor_interpolation(self, img, Zoom_index):
         img = cv2.resize(img, Zoom_index, interpolation = cv2.INTER_NEAREST)
+
         return img
     
     def image_bilinear_interpolation(self, img, Zoom_index):
@@ -91,3 +92,98 @@ class basic_cv_tool:
         H_matrix = ((img_points_2.transpose()).dot(img_points_1)).dot(np.linalg.inv((img_points_1.transpose()).dot(img_points_1)))
         print(H_matrix)
         return H_matrix[:2]
+
+    def calcdf(self, img):
+        hist, bins = np.histogram(img.flatten(), 256, [0,256])
+        cdf = hist.cumsum()
+        cdf_normalized = cdf*255/cdf.max()
+        cdf = (cdf-cdf[0]) *255/ (cdf[-1]-1)
+        cdf = cdf_normalized.astype(np.uint8)
+        temp = np.zeros(256,dtype = np.uint8)
+        j = 0
+        for i in range(256):
+            j = cdf[i]
+            temp[j]=i
+        for i in range(255):
+            if temp[i+1]<temp[i]:
+                temp[i+1] = temp[i]
+        return temp
+    
+    def createcdf(self, hist):
+        cdf = hist.cumsum()
+        cdf_normalized = cdf*255/cdf.max()
+        cdf = (cdf-cdf[0]) *255/ (cdf[-1]-1)
+        cdf = cdf_normalized.astype(np.uint8)
+        temp = np.zeros(256,dtype = np.uint8)
+        j = 0
+        for i in range(256):
+            j = cdf[i]
+            temp[j]=i
+        for i in range(255):
+            if temp[i+1]<temp[i]:
+                temp[i+1] = temp[i]
+        return temp
+    
+    def createhisto(self, array):
+        array = np.array(array)
+        x = np.linspace(0,255,shape(array)[0])
+        f = interp1d(x,array,kind='linear')
+        x_pred=np.linspace(0,255,256)
+        arr = f(x_pred)
+        return arr
+    
+    def histo_matching(self, img, cdf):
+        res = np.zeros((512, 512, 3), dtype =np.uint8)
+        res = cdf[img]
+        return res
+    
+    def local_histo(self, img, index):
+        model = np.ones((index,index),dtype = np.uint8)
+        img_copy = cv2.copyMakeBorder(img,(index-1)/2,(index-1)/2,(index-1)/2,(index-1)/2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(shape(img)[0]):
+            for j in range(shape(img)[1]):
+                for k in range(3):
+                    cdf = calcdf(img_copy[i-3:i+3,j-3:j+3])
+                    img[i,j,k] = cdf[img[i,j,k]]
+        return img
+    
+    def segmentation(self, img):
+        T = 30
+        color = np.linspace(0,255,256)
+        hist , bins = np.histogram(img.flatten(), 256,[0,256])
+        print("image mean value is", T)
+        while(1):
+            T1 = (hist[:T]*color[:T]).sum()/hist[:T].sum()
+            T2 = (hist[T:]*color[T:]).sum()/hist[T:].sum()
+            temp = T
+            T = int((T1+T2)/2)
+            print("T1",T1,"T2",T2,"T",T)
+            if abs(temp-T)<0.01:
+                break
+        img1 = zeros((shape(img)[0],shape(img)[1],3),dtype = uint8)
+        img2 = zeros((shape(img)[0],shape(img)[1],3),dtype = uint8)
+        for i in range(shape(img)[0]):
+            for j in range(shape(img)[1]):
+                if img[i,j]<T:
+                    img1[i,j] = img[i,j]
+                else:
+                    img2[i,j] = img[i,j]
+        return img1,img2
+            
+      
+    def img_histogram(self, img, result_name):
+        plt.title(u"original histogram")
+        plt.hist(img.ravel(), 256, [0,256])
+        plt.show()
+        equ = cv2.equalizeHist(img)
+        res = np.hstack((img, equ))
+        cv2.imwrite(result_name, res)
+        im = Image.open(result_name)
+        plt.imshow(im)
+        plt.figure()
+        plt.title(u"new histogram")
+        res = self.ImageRead(result_name)
+        plt.hist(equ.ravel(), 256, [0,256])
+        plt.show()
+    
+      
