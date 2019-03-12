@@ -108,6 +108,14 @@ class basic_cv_tool:
             if temp[i+1]<temp[i]:
                 temp[i+1] = temp[i]
         return temp
+
+    def cdf(self, img):
+        hist, bins = np.histogram(img.flatten(), 256, [0,256])
+        cdf = hist.cumsum()
+        cdf_normalized = cdf*255/cdf.max()
+        cdf = (cdf-cdf[0]) *255/ (cdf[-1]-1)
+        cdf = cdf_normalized.astype(np.uint8)
+        return cdf
     
     def createcdf(self, hist):
         cdf = hist.cumsum()
