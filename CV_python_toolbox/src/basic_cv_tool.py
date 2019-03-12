@@ -138,13 +138,11 @@ class basic_cv_tool:
         return res
     
     def local_histo(self, img, index):
-        model = np.ones((index,index),dtype = np.uint8)
-        img_copy = cv2.copyMakeBorder(img,(index-1)/2,(index-1)/2,(index-1)/2,(index-1)/2, cv2.BORDER_CONSTANT,value=[0,0,0])
-        for i in range(shape(img)[0]):
-            for j in range(shape(img)[1]):
-                for k in range(3):
-                    cdf = calcdf(img_copy[i-3:i+3,j-3:j+3])
-                    img[i,j,k] = cdf[img[i,j,k]]
+        img_copy = cv2.copyMakeBorder(img,(index-1)//2,(index-1)//2,(index-1)//2,(index-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = cv2.equalizeHist(img_copy[i:i+index,j:j+index])
+                img[i,j] = temp[(index-1)//2,(index-1)//2]
         return img
     
     def segmentation(self, img):
@@ -171,19 +169,10 @@ class basic_cv_tool:
         return img1,img2
             
       
-    def img_histogram(self, img, result_name):
-        plt.title(u"original histogram")
-        plt.hist(img.ravel(), 256, [0,256])
-        plt.show()
+    def equalize_histogram(self, img, result_name):
         equ = cv2.equalizeHist(img)
         res = np.hstack((img, equ))
         cv2.imwrite(result_name, res)
-        im = Image.open(result_name)
-        plt.imshow(im)
-        plt.figure()
-        plt.title(u"new histogram")
-        res = self.ImageRead(result_name)
-        plt.hist(equ.ravel(), 256, [0,256])
-        plt.show()
+        return equ
     
       
