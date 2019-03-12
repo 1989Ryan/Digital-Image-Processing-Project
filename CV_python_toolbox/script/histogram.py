@@ -123,8 +123,8 @@ def hist_segmentation(imagename):
 
 
 if __name__ == '__main__':
-    '''
-    Assignment 1, equalized histogram transformation
+    
+    #Assignment 1, equalized histogram transformation
     equalized_histogram('lena')
     equalized_histogram('elain')
     equalized_histogram('lena1')
@@ -133,13 +133,17 @@ if __name__ == '__main__':
     equalized_histogram('elain1')
     equalized_histogram('elain2')
     equalized_histogram('elain3')
+    equalized_histogram('woman')
+    equalized_histogram('woman1')
+    equalized_histogram('woman2')
     equalized_histogram('citywall')
     equalized_histogram('citywall1')
     equalized_histogram('citywall2')
-    Assignment 2, specialized histogram transformation
+    #Assignment 2, specialized histogram transformation
     cdf1 = calcdf('lena')
     cdf2 = calcdf('elain')
     cdf3 = calcdf('citywall')
+    cdf4 = calcdf('woman')
     histogram_specialization('lena1',cdf1)
     histogram_specialization('lena2',cdf1)
     histogram_specialization('lena4',cdf1)
@@ -148,13 +152,11 @@ if __name__ == '__main__':
     histogram_specialization('elain3',cdf2)
     histogram_specialization('citywall1',cdf3)
     histogram_specialization('citywall2',cdf3)
-    '''
-    '''
-    Assignment 3, local histogram transformation using equalization transformation.
-    '''
-    '''
+    histogram_specialization('woman1',cdf4)
+    histogram_specialization('woman2',cdf4)
+    #Assignment 3, local histogram transformation using equalization transformation.
     local_histogram('lena',7)
     local_histogram('elain',7)
-    '''
     hist_segmentation('elain')
+    hist_segmentation('woman')
     
