@@ -4,7 +4,9 @@ Digital Image Processing Projects and Papers.
 
 ## basic cv toolbox for python
 
-The basic computer vision toolbox for python. Built for first project assignments.
+The basic computer vision toolbox for python, which consists of some basic tools for computer vision. Some tools are not covered by opencv. 
+
+This toolbox is only used for DIP course.
 
 ### prerequisite
 
@@ -18,9 +20,10 @@ If you want to use my paper structure, you have to install a considerable number
 
 ## homework2
 
-Second project assignment report.
+Second project assignment report. We have updated the toolbox for some new functions.
 
 ## homework3
 
-Third project assignment report and supporting materials.
+Third project assignment supporting materials.
+
 The toolbox has updated to the latest version which contains all the tools for image histogram equalization, histogram specialization, local histogram transformation and image segmentation using histogram thresholding.
