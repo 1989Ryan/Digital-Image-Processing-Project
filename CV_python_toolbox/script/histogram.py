@@ -8,6 +8,23 @@ from src.basic_cv_tool import *
 '''This is the test file for project No.3 which consists of all the required 
 assignments.
 '''
+
+def draw_histogram(imagename):
+    image_name1 = "../../homework3/project3/"+imagename+".bmp"
+    image_hist1 = "../../homework3/project3/"+imagename+"_hist.png"
+    tool = basic_cv_tool(image_name1)
+    img = tool.ImageRead(image_name1)
+    fig = plt.figure()
+    ax1 = fig.add_subplot(111)
+    ax3 = ax1.twinx()
+    ax1.set_title('original histogram',fontsize = 11)
+    ax1.hist(img.ravel(),256,[0,255])
+    cdf = tool.cdf(img)
+    ax3.plot(cdf,color = 'r')
+    fig.legend(('cdf','histogram'), loc = 'upper left')
+    plt.savefig(image_hist1)
+    plt.close()
+
 def equalized_histogram(imagename):
     image_name1 = "../../homework3/project3/"+imagename+".bmp"
     image_cdf1 = "../../homework3/project3/"+imagename+"_cdf.png"
@@ -180,10 +197,14 @@ def hist_segmentation(imagename):
 
 
 if __name__ == '__main__':
+    '''
+    draw_histogram('lena')
+    draw_histogram('elain')
+    draw_histogram('woman')
+    draw_histogram('citywall')
     
     #Assignment 1, equalized histogram transformation
     equalized_histogram('lena')
-
     equalized_histogram('elain')
     equalized_histogram('lena1')
     equalized_histogram('lena2')
@@ -214,7 +235,7 @@ if __name__ == '__main__':
     histogram_specialization('woman2',cdf4)
     #Assignment 3, local histogram transformation using equalization transformation.
     local_histogram('lena',7)
-    local_histogram('elain',7)
+    local_histogram('elain',7)'''
     hist_segmentation('elain')
     hist_segmentation('woman')
     

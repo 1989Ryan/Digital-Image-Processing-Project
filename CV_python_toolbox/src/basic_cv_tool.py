@@ -4,8 +4,10 @@ import base64
 import struct
 import numpy as np
 from scipy.interpolate import interp1d
+from scipy import signal
 from pylab import *
 from PIL import Image
+from math import *
 
 class basic_cv_tool:
 
@@ -13,7 +15,7 @@ class basic_cv_tool:
         self.ImageName = ImageName
 
     def ImageRead(self, ImageName):
-        img = cv2.imread(ImageName, 0)
+        img = cv2.imread(ImageName, cv2.IMREAD_GRAYSCALE)
         return img
     
     def BMP_information_analysis(self, ImageName):
@@ -174,6 +176,7 @@ class basic_cv_tool:
                     img1[i,j] = img[i,j]
                 else:
                     img2[i,j] = img[i,j]
+                    img1[i,j] = 255
         return img1,img2
             
       
@@ -182,5 +185,45 @@ class basic_cv_tool:
         res = np.hstack((img, equ))
         cv2.imwrite(result_name, res)
         return equ
+
+    def GaussFilter_Kernel_generator(self, sigma, index):
+        kernel = np.zeros((index,index), dtype = int8)
+        temp = (0-index//2)**2 + (0-index//2)**2
+        tr = 1/((1/(2*pi*sigma**2))*np.exp(-temp/2/sigma**2))
+        for i in range(index):
+            for j in range(index):
+                temp = (i-index//2)**2 + (j-index//2)**2
+                kernel[i,j]= round(((1/(2*pi*sigma**2))*exp(-temp/2/sigma**2))*tr)
+        return kernel/np.sum(kernel)
     
-      
+    def GaussFilter(self, img, index):
+        kernel = self.GaussFilter_Kernel_generator(1.5, index)
+        return signal.convolve2d(img, kernel, boundary='symm', mode='same').astype(int)
+
+    def MediumFilter(self, img, index):
+        return cv2.medianBlur(img, index)
+
+    def laplace_filter(self, img):
+        kernel = np.matrix([[0,1,0],[1,-4,1],[0,1,0]])
+        img = signal.convolve2d(img, kernel, boundary='symm', mode='same').astype(int)
+        img[img<0]=0
+        return img
+     
+    def sobel_filter(self, img):
+        kernel1 = np.matrix([[-1,-2,-1],[0,0,0],[1,2,1]])
+        kernel2 = np.matrix([[-1,0,1],[-2,0,2],[-1,0,1]])
+        img_copy = cv2.copyMakeBorder(img,1,1,1,1, cv2.BORDER_CONSTANT,value=[0,0,0])
+        img_new = zeros(np.shape(img),dtype = uint8)
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                img_new[i,j] = abs(np.sum(np.multiply(kernel1, img_copy[i:i+3,j:j+3]))) \
+                     + abs(np.sum(np.multiply(kernel2, img_copy[i:i+3,j:j+3])))
+        return img_new
+    
+    def unsharp_mask_filter(self, img, k):
+        img_blur = self.GaussFilter(img, 7)
+        mask = img - img_blur
+        return img + k * mask
+
+    def canny(self, img):
+        return cv2.Canny(img.copy(),20,200)
