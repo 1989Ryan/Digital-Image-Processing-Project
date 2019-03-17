@@ -12,6 +12,26 @@ This toolbox is only used for DIP course.
 
 Although no one cares a shit about that project, this toolbox needs python-opencv.
 
+### Structure
+
+```
+CV_Python_Toolbox\
+  scripts\
+    histogram.py
+    filter.py
+  src\
+    __init__.py
+    basic_cv_toolbox.py
+  test\
+    *
+homework1\
+homework2\
+homwwork3\
+homework4\
+.gitignore
+README.md
+```
+
 ## homework1
 
 First project assignment report, using latex.
