@@ -227,3 +227,83 @@ class basic_cv_tool:
 
     def canny(self, img):
         return cv2.Canny(img.copy(),20,200)
+    
+    def Transform_matrix(self, d, n, Class, name, img):
+        matrix = np.zeros(np.shape(img))
+        center = tuple(map(lambda x:(x-1)/2, np.shape(img)))
+        for i in range(np.shape(matrix)[0]):
+            for j in range(np.shape(matrix)[1]):
+                dis = sqrt((center[0] - i) ** 2 + (center[1] - j) ** 2)
+                if name == "butterworth":
+                       if Class == "low":
+                            matrix[i,j] = 1 / (1 + (dis / d) ** (2*n))
+                       else :
+                            matrix[i,j] = 1 / (1 + (d / dis) ** (2*n))
+                elif name == "gauss":
+                       if Class == "low":
+                            matrix[i,j] = np.exp(-(dis**2)/(2*(d**2)))
+                       else :
+                            matrix[i,j] = 1 - np.exp(-(dis**2)/(2*(d**2)))
+                elif name == "laplace":
+                    matrix[i,j] = -4*pi*dis**2
+                else:
+                    matrix[i,j] = np.exp(-(dis**2)/(2*(d**2)))
+        return matrix
+    
+    def BLPF(self, img, d, n):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "low", "butterworth", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        return new_img
+        
+    
+    def GLPF(self, img,d,n):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "low",  "gauss", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        return new_img
+    
+    def BHPF(self, img,d,n):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "high", "butterworth", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        return new_img
+    
+    def GHPF(self, img, d, n):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "high", "gauss", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        return new_img
+    
+    def LHPF(self, img, d, n):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "high", "laplace", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        return new_img
+    
+    def Unsharp_Masking(self, img, d, n, k):
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        d_matrix = self.Transform_matrix(d, n, "high", "gauss", img)
+        new_img = np.abs(np.fft.ifft2(np.fft.ifftshift(fshift*d_matrix)))
+        new_img = img + k*new_img
+        return new_img
+    
+    def Power_spectrum_ratio(self, img, img_new):
+        #center = tuple(map(lambda x:(x-1)/2, np.shape(img)))
+        p = np.zeros(np.shape(img))
+        p1 = np.zeros(np.shape(img))
+        f = np.fft.fft2(img)
+        fshift = np.fft.fftshift(f)
+        f2 = np.fft.fft2(img_new)
+        fshift2 = np.fft.fftshift(f2)
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                p[i,j] = abs(fshift[i,j])**2
+                p1[i,j] = abs(fshift2[i,j])**2
+        return np.sum(p1)/np.sum(p)    
