@@ -1,6 +1,6 @@
 # Digital-Image-Processing-Project
 
-Digital Image Processing Projects and Papers.
+XJTU undergraduate course, Digital Image and Video Processing.
 
 ## basic cv toolbox for python
 
