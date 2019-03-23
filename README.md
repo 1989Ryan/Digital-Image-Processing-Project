@@ -54,10 +54,10 @@ The toolbox has been updated to the latest version which contains all the tools 
 
 Forth project assignment supporting materials.
 
-The toolbox has been updated to the latest version which contains all the basic tools for spacial filtering including gaussian filter and high-pass filter module. You can use it directly or see my scripts to learn how to use it.
+The toolbox has been updated to the latest version which contains all the basic tools for spacial filtering including gaussian filter and high-pass filter module. You can use it directly or see my script ``CV_Python_Toolbox\scripts\filter.py`` to learn how to use it.
 
 ## homework5
 
 Fifth project assignment supporting materials.
 
-The toolbox has been updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. You can see my script to learn how to use it.
+The toolbox has been updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. You can see my script ``CV_Python_Toolbox\scripts\FreqFilter.py``  to learn how to use it.
