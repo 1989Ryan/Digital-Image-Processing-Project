@@ -245,7 +245,7 @@ class basic_cv_tool:
                        else :
                             matrix[i,j] = 1 - np.exp(-(dis**2)/(2*(d**2)))
                 elif name == "laplace":
-                    matrix[i,j] = -4*pi*dis**2
+                    matrix[i,j] = -4*pi*dis**2/(center[0]**2+center[1]**2)
                 else:
                     matrix[i,j] = np.exp(-(dis**2)/(2*(d**2)))
         return matrix
