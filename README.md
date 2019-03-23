@@ -47,16 +47,16 @@ Second project assignment report. We have updated the toolbox for some new funct
 
 Third project assignment supporting materials.
 
-The toolbox has updated to the latest version which contains all the tools for image histogram equalization, histogram specialization, local histogram transformation and image segmentation using histogram thresholding.
+The toolbox has been updated to the latest version which contains all the tools for image histogram equalization, histogram specialization, local histogram transformation and image segmentation using histogram thresholding.
 
 ## homework4
 
 Forth project assignment supporting materials.
 
-The toolbox has updated to the latest version which contains all the basic tools for spacial filtering including gaussian filter and high-pass filter module. You can use it directly or see my scripts to learn how to use them.
+The toolbox has been updated to the latest version which contains all the basic tools for spacial filtering including gaussian filter and high-pass filter module. You can use it directly or see my scripts to learn how to use them.
 
 ## homework5
 
 Fifth project assignment supporting materials.
 
-The toolbox has updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. 
+The toolbox has been updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. 
