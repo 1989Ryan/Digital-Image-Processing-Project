@@ -56,6 +56,6 @@ The toolbox has updated to the latest version which contains all the basic tools
 
 ## homework5
 
-* 1频域低通滤波器：设计低通滤波器包括 butterworth and Gaussian (选择合适的半径，计算功率谱比),平滑测试图像test1和2;分析各自优缺点；
-* 2频域高通滤波器：设计高通滤波器包括butterworth and Gaussian，在频域增强边缘。选择半径和计算功率谱比，测试图像test3,4：分析各自优缺点；
-* 3其他高通滤波器：拉普拉斯和Unmask，对测试图像test3,4滤波；分析各自优缺点；
+Fifth project assignment supporting materials.
+
+The toolbox has updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. 
