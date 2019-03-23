@@ -19,6 +19,7 @@ CV_Python_Toolbox\
   scripts\
     histogram.py
     filter.py
+    FreqFilter.py
   src\
     __init__.py
     basic_cv_toolbox.py
