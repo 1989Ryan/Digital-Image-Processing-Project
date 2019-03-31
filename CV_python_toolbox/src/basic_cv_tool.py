@@ -321,6 +321,23 @@ class basic_cv_tool:
                 elif img[i,j]<0:
                     img[i,j] = 0
         return img
+    
+    def Salt_Noise_generator(self, img, perc):
+        num = int(np.size(img)*perc)
+        for i in range(num):
+            x = randint(0, np.shape(img)[0] - 1)
+            y = randint(0, np.shape(img)[1] - 1) 
+            img[x][y] = 255
+        return img
+    
+    def Pepper_Noise_generator(self, img, perc):
+        num = int(np.size(img)*perc)
+        for i in range(num):
+            x = randint(0, np.shape(img)[0] - 1)
+            y = randint(0, np.shape(img)[1] - 1) 
+            img[x][y] = 0
+        return img
+
 
     def Salt_and_Pepper_Noise_generator(self, img, perc):
         num = int(np.size(img)*perc)
@@ -363,13 +380,11 @@ class basic_cv_tool:
         for i in range(np.shape(img)[0]):
             for j in range(np.shape(img)[1]):
                 temp = 0.0
-                num = 0
                 for m in range(index1):
                     for n in range(index2):
                         if img_copy[i+m, j+n]!=0:
                             temp = temp+1/img_copy[i+m, j+n] 
-                            num += 1
-                img_temp[i,j] = num/temp
+                img_temp[i,j] = index1*index2/temp
         return img_temp
 
     def contraharm_meanFilter(self, img, index1, index2,q):
@@ -409,8 +424,8 @@ class basic_cv_tool:
         img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
         for i in range(np.shape(img)[0]):
             for j in range(np.shape(img)[1]):
-                temp = np.max(img_copy[i:i+index1,j:j+index2])+np.min(img_copy[i:i+index1,j:j+index2])
-                img_temp[i,j] = temp/2
+                temp = np.max(img_copy[i:i+index1,j:j+index2])/2+np.min(img_copy[i:i+index1,j:j+index2])/2
+                img_temp[i,j] = temp
         return img_temp
     
     def fixed_alpha_meanFilter(self, img, index1, index2, d):
