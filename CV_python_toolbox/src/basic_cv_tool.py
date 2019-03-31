@@ -8,6 +8,7 @@ from scipy import signal
 from pylab import *
 from PIL import Image
 from math import *
+from random import *
 
 class basic_cv_tool:
 
@@ -307,3 +308,122 @@ class basic_cv_tool:
                 p[i,j] = abs(fshift[i,j])**2
                 p1[i,j] = abs(fshift2[i,j])**2
         return np.sum(p1)/np.sum(p)    
+
+    def Gaussian_Noise_generator(self, img, sigma, mu, k):
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                tmprand = gauss(mu, sigma)
+                if tmprand<0 or tmprand>255:
+                    continue
+                img[i,j] = img[i,j] + k * tmprand
+                if img[i,j] > 255:
+                    img[i,j] = 255
+                elif img[i,j]<0:
+                    img[i,j] = 0
+        return img
+
+    def Salt_and_Pepper_Noise_generator(self, img, perc):
+        num = int(np.size(img)*perc)
+        for i in range(num):
+            x = randint(0, np.shape(img)[0] - 1)
+            y = randint(0, np.shape(img)[1] - 1)
+            if randint(0,1) == 0: 
+                img[x][y] = 255
+            else:
+                img[x][y] = 0
+        return img
+
+    def meanFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = np.mean(img_copy[i:i+index1,j:j+index2])
+                img_temp[i,j] = temp
+        return img_temp
+
+    def geo_meanFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = 1.0
+                num = 0
+                for m in range(index1):
+                    for n in range(index2):
+                        if img_copy[i+m, j+n]!=0:
+                            temp = temp*img_copy[i+m, j+n] 
+                            num += 1
+                img_temp[i,j] = pow(temp,1/num)
+        return img_temp
+    
+    def har_meanFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = 0.0
+                num = 0
+                for m in range(index1):
+                    for n in range(index2):
+                        if img_copy[i+m, j+n]!=0:
+                            temp = temp+1/img_copy[i+m, j+n] 
+                            num += 1
+                img_temp[i,j] = num/temp
+        return img_temp
+
+    def contraharm_meanFilter(self, img, index1, index2,q):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp1 = 0.0
+                temp2 = 0.0
+                for m in range(index1):
+                    for n in range(index2):
+                        temp1 = temp1 + img_copy[i+m, j+n]**(q+1)
+                        temp2 = temp2 + img_copy[i+m, j+n]**q
+                img_temp[i,j] = temp1/temp2
+        return img_temp
+
+    def maxFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = np.max(img_copy[i:i+index1,j:j+index2])
+                img_temp[i,j] = temp
+        return img_temp
+    
+    def minFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = np.min(img_copy[i:i+index1,j:j+index2])
+                img_temp[i,j] = temp
+        return img_temp
+    
+    def midFilter(self, img, index1, index2):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = np.max(img_copy[i:i+index1,j:j+index2])+np.min(img_copy[i:i+index1,j:j+index2])
+                img_temp[i,j] = temp/2
+        return img_temp
+    
+    def fixed_alpha_meanFilter(self, img, index1, index2, d):
+        img_temp = img.copy()
+        img_copy = cv2.copyMakeBorder(img,(index1-1)//2,(index1-1)//2,(index2-1)//2,(index2-1)//2, cv2.BORDER_CONSTANT,value=[0,0,0])
+        for i in range(np.shape(img)[0]):
+            for j in range(np.shape(img)[1]):
+                temp = np.array(img_copy[i:i+index1,j:j+index2])
+                temp = temp.flatten()
+                temp = np.sort(temp)
+                temp = np.sum(temp[int(d/2):index1*index2-int(d/2)])
+                img_temp[i,j] = temp/(index1*index2-d)
+        return img_temp
+
+    def self_ad_Filter(self, img, index1, index2):
+        pass
