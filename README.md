@@ -60,7 +60,7 @@ The toolbox has been updated to the latest version which contains all the basic 
 
 Fifth project assignment supporting materials.
 
-The toolbox has been updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. You can see my script ``CV_Python_Toolbox\scripts\FreqFilter.py``  to learn how to use it.
+The toolbox has been updated to the latest version which contains all the basic tools for frequency domain filtering including BLPF, GLPF, BHPF, GHPF, Laplacian and Unsharp Masking. You can see my script ``CV_Python_Toolbox\scripts\FreqFilter.py``  or visit my [homework report](https://1989Ryan.github.io/hw5.html) to learn how to use it.
 
 ## homework6
 
