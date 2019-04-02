@@ -52,7 +52,7 @@ The toolbox has been updated to the latest version which contains all the tools 
 
 ## homework4
 
-Forth project assignment supporting materials.
+Fourth project assignment supporting materials.
 
 The toolbox has been updated to the latest version which contains all the basic tools for spacial filtering including gaussian filter and high-pass filter module. You can use it directly or see my script ``CV_Python_Toolbox\scripts\filter.py`` to learn how to use it.
 
