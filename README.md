@@ -1,6 +1,6 @@
 # Digital-Image-Processing-Project
 
-XJTU undergraduate course, Digital Image and Video Processing.
+XJTU undergraduate course, Digital Image and Video Processing. You can visit my [homework website](https://1989Ryan.github.io/DIPhw/diphw.html) to see my homework report and projects.
 
 ## basic cv toolbox for python
 
