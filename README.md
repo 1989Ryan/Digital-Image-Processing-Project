@@ -1,6 +1,5 @@
 # Digital-Image-Processing-Project
-![license](https://img.shields.io/bower/l/bootstrap.svg?color=blue) <a href="https://996.icu/#/en_US"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
-
+![license](https://img.shields.io/bower/l/bootstrap.svg?color=blue) <a href="https://996.icu/#/en_US"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a> <a href="https://1989Ryan.github.io/DIPhw/diphw.html"><img src="https://img.shields.io/badge/link-DIP%20homework-green.svg"  /></a>
 
 XJTU undergraduate course, Digital Image and Video Processing. You can visit my [homework website](https://1989Ryan.github.io/DIPhw/diphw.html) to see my homework report and projects.
 
