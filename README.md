@@ -1,5 +1,5 @@
 # Digital-Image-Processing-Project
-![](https://img.shields.io/bower/l/bootstrap.svg?color=blue)
+![license](https://img.shields.io/bower/l/bootstrap.svg?color=blue)
 
 
 XJTU undergraduate course, Digital Image and Video Processing. You can visit my [homework website](https://1989Ryan.github.io/DIPhw/diphw.html) to see my homework report and projects.
