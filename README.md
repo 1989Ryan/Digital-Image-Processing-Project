@@ -5,9 +5,9 @@ XJTU undergraduate course, Digital Image and Video Processing. You can visit my 
 
 ## basic cv toolbox for python
 
-The basic computer vision toolbox for python, which consists of some basic tools for computer vision. Some tools are not covered by opencv. 
+The basic computer vision toolbox for python, which consists of some basic tools for computer vision and image fusion. Some tools are not covered by opencv. 
 
-This toolbox is only used for DIP course.
+This toolbox is only used for DIP course and Multi-Sensor Fusion course.
 
 ### prerequisite
 
@@ -23,7 +23,8 @@ CV_Python_Toolbox\
     FreqFilter.py
   src\
     __init__.py
-    basic_cv_toolbox.py
+    basic_cv_tool.py
+    image_fusion_tool.py
   test\
     *
 homework1\
@@ -31,6 +32,7 @@ homework2\
 homwwork3\
 homework4\
 homework5\
+homework6\
 .gitignore
 README.md
 ```
