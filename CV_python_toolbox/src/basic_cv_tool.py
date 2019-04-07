@@ -44,6 +44,97 @@ class basic_cv_tool:
                 for k in range(3):
                     img[i,j,k] =(img[i,j,k]/ reduce_index) *(255 /(255 / reduce_index))
         return img
+    
+    def RGB2HSI(self, rgb_img):
+        """
+        RGB to HSI
+        :param rgm_img: RGB image
+        :return: HSI image
+        """
+        row = np.shape(rgb_img)[0]
+        col = np.shape(rgb_img)[1]
+        hsi_img = rgb_img.copy()
+        B,G,R = cv2.split(rgb_img)
+        [B,G,R] = [ i/ 255.0 for i in ([B,G,R])]
+        H = np.zeros((row, col))    
+        I = (R + G + B) / 3.0       
+        S = np.zeros((row,col))      
+        for i in range(row):
+            den = np.sqrt((R[i]-G[i])**2+(R[i]-B[i])*(G[i]-B[i]))
+            thetha = np.arccos(0.5*(R[i]-B[i]+R[i]-G[i])/den)   
+            h = np.zeros(col)               
+            h[B[i]<=G[i]] = thetha[B[i]<=G[i]]
+            h[G[i]<B[i]] = 2*np.pi-thetha[G[i]<B[i]]
+            h[den == 0] = 0
+            H[i] = h/(2*np.pi)      
+        for i in range(row):
+            min = []
+            for j in range(col):
+                arr = [B[i][j],G[i][j],R[i][j]]
+                min.append(np.min(arr))
+            min = np.array(min)
+            S[i] = 1 - min*3/(R[i]+B[i]+G[i])
+            S[i][R[i]+B[i]+G[i] == 0] = 0
+        hsi_img[:,:,0] = H*255
+        hsi_img[:,:,1] = S*255
+        hsi_img[:,:,2] = I*255
+        return hsi_img
+
+    def HSI2RGB(self, hsi_img):
+        """
+        HSI image transform to RGB image
+        :param hsi_img: HSI image
+        :return: return RGB image
+        """
+        # save the shape of original image
+        row = np.shape(hsi_img)[0]
+        col = np.shape(hsi_img)[1]
+        #copy the origin image
+        rgb_img = hsi_img.copy()
+        #split the channel
+        H,S,I = cv2.split(hsi_img)
+        #project the channel into [0,1]
+        [H,S,I] = [ i/ 255.0 for i in ([H,S,I])]
+        R,G,B = H,S,I
+        for i in range(row):
+            h = H[i]*2*np.pi
+            #H is bigger than 0 but smaller than 120
+            a1 = h >=0
+            a2 = h < 2*np.pi/3
+            a = a1 & a2         #index in first situation
+            tmp = np.cos(np.pi / 3 - h)
+            b = I[i] * (1 - S[i])
+            r = I[i]*(1+S[i]*np.cos(h)/tmp)
+            g = 3*I[i]-r-b
+            B[i][a] = b[a]
+            R[i][a] = r[a]
+            G[i][a] = g[a]
+            #H is bigger than 120 but smaller than 240
+            a1 = h >= 2*np.pi/3
+            a2 = h < 4*np.pi/3
+            a = a1 & a2         #index in second situation
+            tmp = np.cos(np.pi - h)
+            r = I[i] * (1 - S[i])
+            g = I[i]*(1+S[i]*np.cos(h-2*np.pi/3)/tmp)
+            b = 3 * I[i] - r - g
+            R[i][a] = r[a]
+            G[i][a] = g[a]
+            B[i][a] = b[a]
+            #H is bigger than 180 but smaller than 360
+            a1 = h >= 4 * np.pi / 3
+            a2 = h < 2 * np.pi
+            a = a1 & a2             
+            tmp = np.cos(5 * np.pi / 3 - h)
+            g = I[i] * (1-S[i])
+            b = I[i]*(1+S[i]*np.cos(h-4*np.pi/3)/tmp)
+            r = 3 * I[i] - g - b
+            B[i][a] = b[a]
+            G[i][a] = g[a]
+            R[i][a] = r[a]
+        rgb_img[:,:,0] = B*255
+        rgb_img[:,:,1] = G*255
+        rgb_img[:,:,2] = R*255
+        return rgb_img
 
     def image_average(self, img):
         mean = np.mean(img)
