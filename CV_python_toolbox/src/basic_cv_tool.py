@@ -8,6 +8,7 @@ from scipy import signal
 from pylab import *
 from PIL import Image
 from math import *
+import cmath
 from random import *
 
 class basic_cv_tool:
@@ -440,5 +441,38 @@ class basic_cv_tool:
                 img_temp[i,j] = temp/(index1*index2-d)
         return img_temp
 
-    def self_ad_Filter(self, img, index1, index2):
-        pass
+    def Blur_filter(self, img, T, a, b):
+        Img = np.fft.fft2(img)
+        Img = np.fft.fftshift(Img)
+        shape = np.shape(Img)
+        H = np.zeros((shape[0], shape[1]), dtype = complex)
+        G = np.zeros((shape[0], shape[1]), dtype = complex)
+        for i in range(shape[0]):
+            for j in range(shape[1]):
+                phase = pi*((i+1)-shape[0]/2)*a + pi*((j+1)-shape[0]/2)*b
+                if phase == 0:
+                    H[i,j] = T
+                else:
+                    H[i,j] = T/phase*sin(phase)*e**(-cmath.sqrt(-1)*phase)
+                G[i,j] = H[i,j]*Img[i,j]
+        return G, H
+
+    def Wenier_filter(self, H, K, G):
+        shape = np.shape(G)
+        F = np.zeros(shape, dtype = complex)
+        for i in range(shape[0]):
+            for j in range(shape[1]):
+                F[i,j] = 1/H[i,j]*(np.abs(H[i,j])**2/(np.abs(H[i,j])**2+K))*G[i,j]
+        return F
+
+    def CLSF(self, H, G, r):
+        shape = np.shape(G)
+        p = np.matrix([[0,-1,0],[-1,4,-1],[0,-1,0]])
+        p = np.pad(p, (shape[0]/2-2, shape[0]/2), 'constant')
+        P = np.fft.fft2(p)
+        P = np.fft.fftshift(P)
+        F = np.zeros(shape, dtype = complex)
+        for i in range(shape[0]):
+            for j in range(shape[1]):
+                F[i,j] = H[i,j].conjugate()/(np.abs(H[i,j])**2+r*np.abs(P[i,j])**2)*G[i,j]
+        return F
