@@ -1,11 +1,11 @@
 # Digital-Image-Processing-Project
 ![license](https://img.shields.io/bower/l/bootstrap.svg?color=blue) <a href="https://996.icu/#/en_US"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a> <a href="https://1989Ryan.github.io/DIPhw/diphw.html"><img src="https://img.shields.io/badge/link-DIP%20homework-green.svg"  /></a>
 
-XJTU undergraduate course, Digital Image and Video Processing. You can visit my [homework website](https://1989Ryan.github.io/DIPhw/diphw.html) to see my homework report and projects.
+XJTU undergraduate course, Digital Image and Video Processing and Multi-data Fusion. You can visit my [homework website](https://1989Ryan.github.io/DIPhw/diphw.html) to see my DIP homework report and projects.
 
 ## basic cv toolbox for python
 
-The basic computer vision toolbox for python, which consists of some basic tools for computer vision and image fusion. Some tools are not covered by opencv. 
+The basic computer vision toolbox for python, which consists of some basic tools for computer vision and image fusion. Most tools are not covered by opencv. 
 
 This toolbox is only used for DIP course and Multi-Sensor Fusion course.
 
@@ -35,6 +35,7 @@ homework5\
 homework6\
 .gitignore
 README.md
+LICENSE
 ```
 
 ## homework1
@@ -70,3 +71,7 @@ The toolbox has been updated to the latest version which contains all the basic 
 Sixth project assignment supporting materials.
 
 The toolbox has been updated to the latest version which contains all the basic tools for image restoration and reconstruction including mean filtering, order-statistics filtering, Wiener fitering and constrained least squares filtering. You can visit my [homework report](https://1989Ryan.github.io/DIPhw/hw6.html) to see how to use them.
+
+## New Updates!
+
+I just update the toolbox with image fusion tool. I just add several methods for image fusion which is simple and not convenient. You can use it for fun since there are several bugs :-). This toolbox update is just aimed at finishing my project of multi-data fusion course.
